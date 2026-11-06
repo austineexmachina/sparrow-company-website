@@ -1,0 +1,51 @@
+﻿# Dependencies and build output
+node_modules/
+.next/
+dist/
+out/
+.vinext/
+.wrangler/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+
+# Local databases and registration data
+/data/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+
+# Local/private environment configuration
+.env
+.env.*
+!.env.example
+!.env.template
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+.envrc
+
+# Cloudflare credentials and local state
+.cloudflare/
+.cf/
+wrangler.local.jsonc
+wrangler.local.toml
+cloudflare-token*
+
+# Private keys and certificates
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Logs, backups, and editor artifacts
+*.log
+*.bak
+*.backup
+*.orig
+*.swp
+*~
+backups/
+private-backups/

@@ -1,0 +1,28 @@
+{
+    "$schema":  "node_modules/wrangler/config-schema.json",
+    "name":  "sparrow-company-website",
+    "compatibility_date":  "2026-11-06",
+    "compatibility_flags":  [
+                                "nodejs_compat"
+                            ],
+    "main":  "vinext/server/fetch-handler",
+    "assets":  {
+                   "directory":  "dist/client",
+                   "html_handling":  "none",
+                   "not_found_handling":  "none",
+                   "binding":  "ASSETS",
+                   "run_worker_first":  [
+                                            "/*",
+                                            "!/_next/static/*",
+                                            "!/*/_next/static/*"
+                                        ]
+               },
+    "d1_databases":  [
+                         {
+                             "database_name":  "sparrow-company-waitlist",
+                             "database_id":  "f2754348-bb54-4c24-a1bf-66cb66b6f6c3",
+                             "binding":  "DB",
+                             "migrations_dir":  "migrations"
+                         }
+                     ]
+}

@@ -1,0 +1,3 @@
+import {describe,it,expect} from "vitest";
+import {contactCategories,contactSchema} from "../../src/lib/contact-schema";
+describe("contact enquiry validation",()=>{it("accepts the six approved categories",()=>{expect(contactCategories).toHaveLength(6);for(const category of contactCategories)expect(contactSchema.safeParse({fullName:"Avery Example",email:"avery@example.com",company:"",category,message:"I would like to discuss a collaboration."}).success).toBe(true)});it("rejects invalid email and short messages",()=>{expect(contactSchema.safeParse({fullName:"Avery Example",email:"bad-email",company:"",category:"General Enquiry",message:"short"}).success).toBe(false)})});

@@ -1,0 +1,4 @@
+import {z} from "zod";
+export const contactCategories=["Investment & Partnerships","Technical Cofounder / Engineering","Business & Entertainment","Press & Media","Creator & Community","General Enquiry"] as const;
+export const contactSchema=z.object({fullName:z.string().trim().min(2,"Enter your full name.").max(120),email:z.email("Enter a valid email address.").trim().toLowerCase().max(254),company:z.string().trim().max(160).optional(),category:z.enum(contactCategories),message:z.string().trim().min(10,"Please provide a little more detail.").max(5000),website:z.string().max(0).optional()});
+export type ContactValues=z.infer<typeof contactSchema>;

@@ -1,0 +1,36 @@
+﻿{
+    "sourceArchive":  "sparrow-exact-six-images-for-codex.zip",
+    "verified":  true,
+    "assets":  [
+                   {
+                       "sha256":  "74ee5e226131a9769237f0cdf37c724da7726de0ade27015d4575024758871ad",
+                       "filename":  "Sparrow Love Edit Campus Celebration(1).png",
+                       "bytes":  3063338
+                   },
+                   {
+                       "sha256":  "8a6e8a2aa35dca7dd8985ffd8bd63a437ceaef7ce2c6c2d35160dcd6c0c5e343",
+                       "filename":  "1000611238.png",
+                       "bytes":  76883
+                   },
+                   {
+                       "sha256":  "97b6bb4c444ddb8e60a7f41108e86d9ea67ae608b80c64965a5f4a41b9d7b2a7",
+                       "filename":  "Sparrow Love Edit Campus Celebration(2).png",
+                       "bytes":  2374360
+                   },
+                   {
+                       "sha256":  "dd1cb249c6d0e811d55852223d8b2ca61cb927582767a6c74997520d385c9420",
+                       "filename":  "Sparrow Love Edit Movie Night.png",
+                       "bytes":  2538056
+                   },
+                   {
+                       "sha256":  "5488ddad2cb1afc75d93a57800b7a72810d60507207f6da487e52c9a63d25861",
+                       "filename":  "1000611244.png",
+                       "bytes":  52345
+                   },
+                   {
+                       "sha256":  "046852971628d29d6bb11c7b0a415c3c3e1d45cc0390641c9a3d15e478fec29e",
+                       "filename":  "1000611243.png",
+                       "bytes":  53919
+                   }
+               ]
+}
