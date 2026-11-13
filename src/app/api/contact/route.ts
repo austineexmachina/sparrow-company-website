@@ -42,7 +42,7 @@ export async function POST(request: Request) {
       subject: `Sparrow Love Edit enquiry: ${parsed.data.category}`,
       text: [`Name: ${parsed.data.fullName}`, `Email: ${parsed.data.email}`, `Company / Organization: ${parsed.data.company || "Not provided"}`, `Category: ${parsed.data.category}`, "", "Message:", parsed.data.message].join("\n"),
     });
-    if (result.error) return deliveryUnavailable(502);
+    if (result.error || !result.data?.id) return deliveryUnavailable(502);
     return NextResponse.json({ accepted: true }, { status: 202 });
   } catch { return deliveryUnavailable(502); }
 }
