@@ -475,3 +475,149 @@ footer a:hover { color: var(--purple); }
 
 .story-word { margin-right: 0.2em; }
 .story-word:last-child { margin-right: 0; }
+
+
+/* UK investor-facing refinement: premium editorial hierarchy and restrained technology detail.
+   Existing brand colours, copy, section order and components remain unchanged. */
+:root {
+  --ink: #24152e;
+  --muted: #65586c;
+  --paper: #fffafd;
+  --line: #e7dce9;
+}
+body {
+  background:
+    radial-gradient(ellipse at 90% 4%, rgb(230 71 173 / 5%), transparent 30rem),
+    linear-gradient(180deg, #fffafd 0%, #fff 48%, #fffafd 100%);
+  letter-spacing: -0.008em;
+}
+::selection { color: #fff; background: #71368a; }
+.header {
+  background: rgb(255 250 253 / 88%);
+  border-bottom-color: rgb(108 49 135 / 12%);
+  box-shadow: 0 8px 28px rgb(38 18 48 / 5%);
+}
+.brand { letter-spacing: -0.045em; }
+.nav-link { font-weight: 600; letter-spacing: 0.005em; }
+.hero {
+  isolation: isolate;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 5% -12% 8% 32%;
+  border: 1px solid rgb(108 49 135 / 7%);
+  border-radius: 48% 52% 44% 56% / 48% 42% 58% 52%;
+  background:
+    linear-gradient(135deg, rgb(255 255 255 / 20%), transparent 48%),
+    repeating-linear-gradient(135deg, transparent 0 34px, rgb(108 49 135 / 2.5%) 35px 36px);
+  transform: rotate(-5deg);
+  pointer-events: none;
+}
+.hero h1, .about-page h1, .contact-page h1 {
+  text-wrap: balance;
+}
+.hero-supporting, .about-page > p, .contact-page > p {
+  letter-spacing: -0.012em;
+}
+.section h2, .contact-page h2, .about-page h2 {
+  text-wrap: balance;
+}
+.card, .about-block, .console {
+  border-color: rgb(108 49 135 / 13%);
+  box-shadow: 0 14px 38px rgb(43 20 54 / 5%), inset 0 1px 0 rgb(255 255 255 / 85%);
+}
+.card {
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  opacity: 0;
+  background: linear-gradient(180deg, var(--pink), var(--purple));
+  transition: opacity var(--motion-standard) ease;
+}
+.card:hover::before { opacity: 1; }
+.contact-page {
+  max-width: 1180px;
+}
+.contact-page > h1 {
+  max-width: 950px;
+  margin: 12px 0 18px;
+  color: #32153e;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.8rem, 6.1vw, 5.25rem);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.06em;
+}
+.contact-page > h2 {
+  margin-top: clamp(42px, 6vw, 68px);
+}
+.contact-category-grid .card {
+  min-height: 170px;
+  padding: 26px;
+}
+.contact-category-grid .card h3 {
+  margin-top: 0;
+  color: #32153e;
+  font-size: 1.08rem;
+  letter-spacing: -0.025em;
+}
+.contact-category-grid .card p {
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+.contact-form {
+  max-width: 760px;
+  padding: clamp(22px, 4vw, 36px);
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgb(255 255 255 / 98%), rgb(253 247 252 / 96%));
+  box-shadow: 0 20px 58px rgb(48 20 60 / 8%), 0 0 0 1px rgb(108 49 135 / 3%);
+}
+.form label {
+  color: #35243e;
+  font-size: 0.94rem;
+  font-weight: 650;
+}
+.form input, .form select, .form textarea {
+  border-color: #d5c8da;
+  border-radius: 12px;
+  min-height: 52px;
+  background: #fff;
+}
+.form textarea { min-height: 176px; }
+.form input:focus-visible, .form select:focus-visible, .form textarea:focus-visible {
+  box-shadow: 0 0 0 4px rgb(108 49 135 / 12%), 0 8px 22px rgb(108 49 135 / 7%);
+}
+.contact-form .btn {
+  min-height: 54px;
+  padding-inline: 28px;
+  letter-spacing: -0.01em;
+}
+.status {
+  max-width: 62ch;
+  color: #5f3275;
+  font-size: 0.92rem;
+}
+footer {
+  background: linear-gradient(180deg, rgb(255 250 253 / 10%), rgb(247 239 249 / 65%));
+}
+footer .wrap > strong {
+  color: #4d2861;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+}
+@media (max-width: 760px) {
+  .hero::before { inset: 28% -35% 8% 8%; opacity: 0.7; }
+  .contact-page > h1 { font-size: clamp(2.55rem, 11vw, 4.1rem); }
+  .contact-category-grid .card { min-height: 0; }
+  .contact-form { padding: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card::before { transition: none; }
+}
