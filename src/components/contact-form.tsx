@@ -27,22 +27,24 @@ export function ContactForm() {
     },
   });
 
-  const submit = handleSubmit(async (values) => {
+  const submit = handleSubmit((values) => {
     setNotice("");
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(values),
-      });
-      const body = await response.json();
-      if (!response.ok || body.accepted !== true) {
-        throw new Error(body.error || "We couldn't send your enquiry. Please try again later.");
-      }
-      setNotice("Thank you. Your enquiry has been sent.");
-    } catch (error) {
-      setNotice(error instanceof Error ? error.message : "We couldn't send your enquiry. Please try again later.");
-    }
+    if (values.website) return;
+
+    const subject = `Sparrow Love Edit enquiry: ${values.category}`;
+    const body = [
+      `Name: ${values.fullName}`,
+      `Email: ${values.email}`,
+      `Company / Organization: ${values.company || "Not provided"}`,
+      `Category: ${values.category}`,
+      "",
+      "Message:",
+      values.message,
+    ].join("\n");
+
+    const mailto = `mailto:austinechibueze905@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+    setNotice("Your email app should open with your enquiry addressed to austinechibueze905@gmail.com. Please press Send in your email app to complete it.");
   });
 
   return (
@@ -100,8 +102,8 @@ export function ContactForm() {
         Leave blank
         <input tabIndex={-1} autoComplete="off" {...register("website")} />
       </label>
-      <button className="btn contact-submit-button" type="submit" disabled={isSubmitting}>
-        {isSubmitting ? "Sending..." : "Submit Enquiry"}
+      <button className="btn contact-submit-button" type="submit" >
+        Submit Enquiry
       </button>
       <p className="status" role="status" aria-live="polite">{notice}</p>
     </form>
