@@ -33,9 +33,9 @@ export async function POST(request: Request) {
   } catch { return deliveryUnavailable(503); }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL;
+  const to = "austinechibueze905@gmail.com";
   const from = process.env.CONTACT_FROM_EMAIL;
-  if (!apiKey || !to || !from) return deliveryUnavailable(503);
+  if (!apiKey || !from) return deliveryUnavailable(503);
   try {
     const result = await new Resend(apiKey).emails.send({
       from, to, replyTo: parsed.data.email,
