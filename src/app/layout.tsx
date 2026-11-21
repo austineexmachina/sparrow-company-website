@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteNavigation } from "@/components/site-navigation";
 import "./globals.css";
+import "./cinematic.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://sparrow-company-website.austinechibueze905.workers.dev"),
