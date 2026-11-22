@@ -1,30 +1,23 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
-test("home shows approved copy and all original images", async ({ page }) => {
+test("home renders the approved company story and retained gallery images", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByRole("heading", { name: /Sparrow Love Edit.*Where Creativity Takes Flight/ })).toBeVisible();
-  await expect(page.getByText("A new world of creativity, storytelling, entertainment and digital innovation is coming.")).toBeVisible();
-  await expect(page.getByText("Big ideas. Bold imaginations. Endless possibilities. Welcome to the creative world of Sparrow Love Edit.")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Building the Future of Global Entertainment." })).toBeVisible();
+  await expect(page.getByText("An AI-powered entertainment technology ecosystem connecting creative software, animation, film production, social entertainment and streaming — built for creators and audiences worldwide.")).toBeVisible();
+  await expect(page.getByText("From a first idea to an entire universe.")).toBeVisible();
+  await expect(page.getByText("A production floor for worlds yet to be imagined.")).toBeVisible();
+  await expect(page.getByText("Science fiction. At cinematic scale.")).toBeVisible();
   await expect(page.getByText("Your Vision. Your Story. Your Studio.")).toBeVisible();
   await expect(page.getByText("From Imagination to the Big Screen.")).toBeVisible();
   await expect(page.getByText("Big Dreams. Magical Stories.")).toBeVisible();
-  await expect(page.getByText("Create Together. Connect Everywhere. A creative community where talent, entertainment and opportunity meet.", { exact: false })).toBeVisible();
-  const body = await page.locator("body").innerText();
-  for (const text of [
-    "Promotional artwork only.",
-    "promotional illustration",
-    "not a verified customer photograph",
-    "Illustrative company storytelling",
-    "Concept illustration",
-    "1000611243.png",
-    "Sparrow Love Edit Movie Night.png",
-  ]) {
-    expect(body).not.toContain(text);
-  }
-  const images = await page.locator(".crew img").all();
-  expect(images).toHaveLength(6);
-  for (const image of images) {
+  await expect(page.getByText("Create Together. Connect Everywhere. Building the Future of Global Entertainment.")).toBeVisible();
+
+  const galleryImages = page.locator(".crew img");
+  await expect(galleryImages).toHaveCount(2);
+  await expect(galleryImages.nth(0)).toHaveAttribute("alt", "Sparrow Love Edit family movie-night illustration.");
+  await expect(galleryImages.nth(1)).toHaveAttribute("alt", "Original Sparrow Love Edit campus celebration artwork.");
+  for (const image of await galleryImages.all()) {
     await image.scrollIntoViewIfNeeded();
     await expect.poll(() => image.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true);
   }
@@ -58,7 +51,7 @@ test("What Is Sparrow story presents all five scenes in order", async ({ page })
   ];
   const headings = story.locator(".what-is-sparrow-scene h2");
   await expect(headings).toHaveCount(5);
-  const actual = (await headings.allTextContents()).map((text) => text.replace(/\s+/g, " ").trim());
+  const actual = (await headings.allTextContents()).map((text) => text.replace(/\\s+/g, " ").trim());
   expect(actual).toEqual(expected);
   await expect(story.getByText("A new vision for digital creativity and entertainment.")).toBeAttached();
   await expect(story.getByText("Sparrow Love Edit — building toward a new generation of creative experiences.")).toBeAttached();

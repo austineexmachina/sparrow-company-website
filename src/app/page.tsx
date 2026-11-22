@@ -28,49 +28,11 @@ const comingSoon = [
 
 function FormulaCar() {
   return (
-    <div className="race-car-stage" aria-label="Original formula-style racing car illustration">
+    <div className="race-car-stage" aria-hidden="true">
       <div className="race-car-grid" aria-hidden="true" />
       <div className="race-car-data race-car-data-top" aria-hidden="true">
         <span>SPARROW / MOTION LAB</span><span>01 — 04</span><span>DOWNFORCE // 100</span>
       </div>
-      <svg className="formula-car" viewBox="0 0 1000 430" role="img" aria-labelledby="car-title">
-        <title id="car-title">Sleek graphite and silver open-wheel racing car</title>
-        <defs>
-          <linearGradient id="carBody" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stopColor="#f0f1f2" />
-            <stop offset=".35" stopColor="#8c929b" />
-            <stop offset=".7" stopColor="#333943" />
-            <stop offset="1" stopColor="#101318" />
-          </linearGradient>
-          <linearGradient id="carEdge" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stopColor="#ffffff" />
-            <stop offset="1" stopColor="#59616b" />
-          </linearGradient>
-          <filter id="carGlow"><feGaussianBlur stdDeviation="14" /></filter>
-        </defs>
-        <ellipse cx="510" cy="320" rx="390" ry="38" fill="#c4cbd5" opacity=".18" filter="url(#carGlow)" />
-        <g fill="#080a0e" stroke="#68717d" strokeWidth="5">
-          <rect x="190" y="164" width="92" height="174" rx="34" transform="rotate(-7 236 251)" />
-          <rect x="715" y="164" width="92" height="174" rx="34" transform="rotate(7 761 251)" />
-          <rect x="78" y="177" width="100" height="176" rx="34" transform="rotate(-7 128 265)" />
-          <rect x="817" y="177" width="100" height="176" rx="34" transform="rotate(7 867 265)" />
-        </g>
-        <g fill="none" stroke="#9da5af" strokeWidth="3" opacity=".72">
-          <path d="M201 222h71M201 248h71M201 274h71M726 222h71M726 248h71M726 274h71" />
-          <path d="M91 236h74M91 262h74M91 288h74M829 236h74M829 262h74M829 288h74" />
-        </g>
-        <path d="M90 155h130l52 24 90 8 90-52 75-18 76 18 90 52 90-8 52-24h130l-14 39-140 28-77 64-144 22-144-22-77-64-140-28z" fill="url(#carBody)" stroke="url(#carEdge)" strokeWidth="5" />
-        <path d="M356 186 449 116l52-13 52 13 93 70-81 20H437z" fill="#1b2028" stroke="#c0c6cf" strokeWidth="4" />
-        <path d="M430 185q70-95 142 0l-31 22h-80z" fill="#080b11" stroke="#818a97" strokeWidth="4" />
-        <path d="M492 99v-28h18v28M481 71h40" stroke="#c8ced6" strokeWidth="8" strokeLinecap="round" fill="none" />
-        <path d="M456 218h92l52 32-97 26-99-26z" fill="#aeb5bf" opacity=".9" />
-        <path d="M98 145h132l-9 23H90zM770 168l-9-23h132l8 23z" fill="#b9c0ca" stroke="#f1f3f6" strokeWidth="3" />
-        <path d="M60 333h205l-17 20H76zM735 353l-17-20h205l-16 20z" fill="#d4d9df" stroke="#8b929c" strokeWidth="3" />
-        <path d="M265 185 385 215 445 265 354 249 290 222zM735 185 615 215 555 265 646 249 710 222z" fill="#6f7884" stroke="#c2c8d0" strokeWidth="3" />
-        <path d="M305 197 410 232M695 197 590 232" stroke="#f4f5f6" strokeWidth="5" opacity=".7" />
-        <path d="M445 292h120l-15 24H460z" fill="#151a21" stroke="#8d96a1" strokeWidth="3" />
-        <path d="M110 366h780" stroke="#d6dbe2" strokeWidth="3" opacity=".48" />
-      </svg>
       <div className="race-car-data race-car-data-bottom" aria-hidden="true">
         <span>ENGINEERED FOR IMAGINATION</span><span>4K / 8K PIPELINE</span><span>RENDER // READY</span>
       </div>
@@ -172,11 +134,6 @@ export default function Home() {
             <p>Our ambition is to enable the creation of immersive science-fiction films and original cinematic worlds, with high-resolution visual pipelines, detailed environments, believable characters, visual effects and carefully directed storytelling.</p>
             <div className="resolution-line"><span>4K UHD</span><i /> <span>8K-READY VISION</span><i /> <span>CINEMATIC VFX</span></div>
           </ScrollReveal>
-          <div className="scifi-frame" aria-label="Abstract science-fiction cinematic environment concept">
-            <div className="scifi-orbit orbit-one" /><div className="scifi-orbit orbit-two" />
-            <div className="scifi-horizon" /><div className="scifi-monolith" />
-            <span className="scifi-coordinate">N 51°30&apos; / FUTURE WORLDS</span><span className="scifi-frame-label">AN ORIGINAL UNIVERSE / IN DEVELOPMENT</span>
-          </div>
         </div>
       </section>
 
