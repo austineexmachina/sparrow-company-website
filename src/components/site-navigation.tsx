@@ -7,6 +7,8 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { motionTokens } from "@/lib/motion-tokens";
 
 const links = [
+  { label: "Film Studio", href: "/#movie-studio" },
+  { label: "Factory", href: "/#film-factory" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
