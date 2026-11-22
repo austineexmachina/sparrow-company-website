@@ -1036,3 +1036,24 @@ body .section h2, body .contact-page h2, body .about-page h2 {
   -webkit-text-fill-color: #f7f5fa;
   background-image: none;
 }
+
+
+/* WCAG contrast refinements for story labels and contact cards */
+.story .eyebrow, .story-grid .eyebrow {
+  color: #e0c9f5 !important;
+}
+.contact-page {
+  color: #f7f5fa;
+  background-color: #101012;
+}
+.contact-page .contact-category-grid .card {
+  color: #f7f5fa;
+  background: linear-gradient(145deg, #19171e, #141317);
+}
+.contact-page .contact-category-grid .card h3 {
+  color: #f7f5fa !important;
+  -webkit-text-fill-color: #f7f5fa;
+}
+.contact-page .contact-category-grid .card p {
+  color: #c2bdc8 !important;
+}
