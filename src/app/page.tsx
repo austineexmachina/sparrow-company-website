@@ -26,6 +26,32 @@ const comingSoon = [
   ["Big Dreams. Magical Stories.", "Discover our ambition for animation, original characters and family entertainment."],
 ];
 
+function FormulaCar() {
+  return (
+    <div className="race-car-stage" aria-label="Original formula-style racing car illustration">
+      <div className="race-car-grid" aria-hidden="true" />
+      <div className="race-car-data race-car-data-top" aria-hidden="true">
+        <span>SPARROW / MOTION LAB</span><span>01 — 04</span><span>DOWNFORCE // 100</span>
+      </div>
+      <div className="race-car-data race-car-data-bottom" aria-hidden="true">
+        <span>ENGINEERED FOR IMAGINATION</span><span>4K / 8K PIPELINE</span><span>RENDER // READY</span>
+      </div>
+      <div className="race-car-number" aria-hidden="true">07</div>
+    </div>
+  );
+}
+
+function CalculatorMotif() {
+  return (
+    <div className="calculator-motif" aria-hidden="true">
+      <span className="calculator-kicker">CREATIVE COMPUTATION</span>
+      <span className="calculator-equation">24 × 60 × 4K</span>
+      <span className="calculator-rule" />
+      <span className="calculator-result">∞ <small>FRAME POSSIBILITIES</small></span>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <main id="main" className="home-page">
@@ -39,6 +65,7 @@ export default function Home() {
         </div>
         <div className="hero-visual-stack">
           <div className="hero-art"><Image priority src={`/images/${encodeURIComponent(retainedImages[0].file)}`} width={1400} height={900} sizes="(max-width: 760px) 100vw, 44vw" alt={retainedImages[0].alt} /></div>
+          <FormulaCar />
         </div>
         <a className="hero-scroll-cue" href="#creator-community" aria-label="Scroll to creator community"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" aria-hidden="true"><path d="M12 4v15m0 0 6-6m-6 6-6-6" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg></a>
       </HeroLighting>
@@ -47,7 +74,7 @@ export default function Home() {
         <div className="wrap">
           <ScrollReveal>
             <p className="eyebrow">Sparrow Movie Studio / 001</p>
-            <h2>From a first idea to a finished story.</h2>
+            <h2>From a first idea to an entire universe.</h2>
             <p className="studio-intro">A connected creative workspace designed around the complete filmmaking journey — from story development and visual planning to production, sound, finishing and delivery.</p>
           </ScrollReveal>
           <div className="studio-console">
@@ -79,13 +106,14 @@ export default function Home() {
               <h2>A production floor for worlds yet to be imagined.</h2>
               <p className="studio-intro">A long-term vision for a coordinated production engine: reusable assets, consistent characters, scene pipelines, parallel rendering and review checkpoints — bringing complex productions into one organised workflow.</p>
             </ScrollReveal>
+            <CalculatorMotif />
           </div>
           <div className="factory-board">
             <div className="factory-board-head"><span>FACTORY CONTROL / 24.01</span><span className="live-indicator">● CONCEPT</span></div>
             {[
               ["01", "Story development", "Concept → script → scene list", "COMPLETE"],
               ["02", "Character & asset lab", "Identity lock · reusable assets", "IN PIPELINE"],
-              ["03", "Scene production", "Layout · animation · visual design", "QUEUED"],
+              ["03", "Scene production", "Layout · animation · VFX", "QUEUED"],
               ["04", "Render & finishing", "Lighting · render · colour", "QUEUED"],
               ["05", "Quality & delivery", "Review · revisions · master", "APPROVAL"],
             ].map(([number, title, detail, status]) => (
@@ -95,6 +123,17 @@ export default function Home() {
             ))}
             <div className="factory-board-foot"><span>CHARACTER CONSISTENCY</span><span>SCENE CONTINUITY</span><span>HUMAN APPROVAL GATES</span></div>
           </div>
+        </div>
+      </section>
+
+      <section className="section scifi-section">
+        <div className="wrap scifi-content">
+          <ScrollReveal>
+            <p className="eyebrow">Sparrow Ultra HD / 003</p>
+            <h2>Science fiction. At cinematic scale.</h2>
+            <p>Our ambition is to enable the creation of immersive science-fiction films and original cinematic worlds, with high-resolution visual pipelines, detailed environments, believable characters, visual effects and carefully directed storytelling.</p>
+            <div className="resolution-line"><span>4K UHD</span><i /> <span>8K-READY VISION</span><i /> <span>CINEMATIC VFX</span></div>
+          </ScrollReveal>
         </div>
       </section>
 
