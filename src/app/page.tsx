@@ -5,7 +5,6 @@ import { PinnedStory } from "@/components/pinned-story";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { WaitlistForm } from "@/components/waitlist-form";
 import { WhatIsSparrowStory } from "@/components/WhatIsSparrowStory";
-import { FilmFactory } from "@/components/film-factory";
 
 // Keep the two family/movie-night campaign visuals on the public homepage.
 const retainedImages = [
@@ -15,8 +14,8 @@ const retainedImages = [
     caption: "Stories bring people together.",
   },
   {
-    file: "1000611243.png",
-    alt: "Sparrow Love Edit family enjoying a movie night.",
+    file: "Sparrow Love Edit Campus Celebration(2).png",
+    alt: "Original Sparrow Love Edit campus celebration artwork.",
     caption: "A world of stories, made for everyone.",
   },
 ];
@@ -142,7 +141,7 @@ export default function Home() {
           <div>
             <ScrollReveal>
               <p className="eyebrow">Sparrow Animation & Film Factory / 002</p>
-              <h2>A production floor for worlds that don't exist yet.</h2>
+              <h2>A production floor for worlds yet to be imagined.</h2>
               <p className="studio-intro">A long-term vision for a coordinated production engine: reusable assets, consistent characters, scene pipelines, parallel rendering and review checkpoints — bringing complex productions into one organised workflow.</p>
             </ScrollReveal>
             <CalculatorMotif />
@@ -176,7 +175,7 @@ export default function Home() {
           <div className="scifi-frame" aria-label="Abstract science-fiction cinematic environment concept">
             <div className="scifi-orbit orbit-one" /><div className="scifi-orbit orbit-two" />
             <div className="scifi-horizon" /><div className="scifi-monolith" />
-            <span className="scifi-coordinate">N 51°30' / FUTURE WORLDS</span><span className="scifi-frame-label">AN ORIGINAL UNIVERSE / IN DEVELOPMENT</span>
+            <span className="scifi-coordinate">N 51°30&apos; / FUTURE WORLDS</span><span className="scifi-frame-label">AN ORIGINAL UNIVERSE / IN DEVELOPMENT</span>
           </div>
         </div>
       </section>
@@ -187,7 +186,6 @@ export default function Home() {
         <GalleryDepth><div className="crew">{retainedImages.map((item, index) => <ScrollReveal className="crew-reveal" delayMs={index * 45} key={item.file}><figure><Image src={`/images/${encodeURIComponent(item.file)}`} width={1400} height={900} sizes="(max-width: 500px) 90vw, (max-width: 760px) 45vw, 33vw" alt={item.alt} loading="lazy" /><figcaption>{item.caption}</figcaption></figure></ScrollReveal>)}</div></GalleryDepth>
       </div></section>
       <PinnedStory />
-      <FilmFactory />
       <section className="section coming-section"><div className="wrap">
         <ScrollReveal><p className="eyebrow">Our product vision</p><h2>One ecosystem. A world of possibilities.</h2></ScrollReveal>
         <div className="cards">{comingSoon.map(([title, description], index) => <ScrollReveal className="card-reveal" delayMs={index * 70} key={title}><article className="card"><span className="label">In development roadmap</span><h3>{title}</h3><p>{description}</p></article></ScrollReveal>)}</div>
