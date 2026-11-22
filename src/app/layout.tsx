@@ -30,7 +30,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <header className="header"><div className="wrap head"><Link className="brand" href="/">Sparrow Love Edit</Link><SiteNavigation /></div></header>
         {children}
-        <footer><div className="wrap"><strong>Sparrow Love Edit</strong><p>UK incorporation planned for 2027 · Building for creators and audiences worldwide</p><p><Link href="/about">About</Link> · <Link href="/contact">Contact</Link> · <Link href="/privacy">Privacy</Link> · <Link href="/terms">Terms</Link></p></div></footer>
+        <footer><div className="wrap"><strong>Sparrow Love Edit</strong><p>UK incorporation planned for 2027 · Building for creators and audiences worldwide</p><p><Link href="/about">About</Link> · <Link href="/contact">Contact</Link> · <Link href="/privacy">Privacy</Link> · <Link href="/terms">Terms</Link></p><p>© 2026 Sparrow Love Edit. All rights reserved.</p></div></footer>
       </body>
     </html>
   );
