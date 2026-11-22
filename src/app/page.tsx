@@ -28,7 +28,7 @@ const comingSoon = [
 
 function FormulaCar() {
   return (
-    <div className="race-car-stage" aria-label="Original formula-style racing car illustration">
+    <div className="race-car-stage" aria-hidden="true">
       <div className="race-car-grid" aria-hidden="true" />
       <div className="race-car-data race-car-data-top" aria-hidden="true">
         <span>SPARROW / MOTION LAB</span><span>01 — 04</span><span>DOWNFORCE // 100</span>
