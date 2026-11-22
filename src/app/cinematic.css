@@ -1057,3 +1057,102 @@ body .section h2, body .contact-page h2, body .about-page h2 {
 .contact-page .contact-category-grid .card p {
   color: #c2bdc8 !important;
 }
+
+
+/* BACKGROUND PALETTE ONLY — charcoal black, grey-black and light green.
+   Foreground colors, typography, borders, layout, media and behavior remain unchanged. */
+html, body { background-color: #111416; }
+body {
+  background:
+    radial-gradient(ellipse at 50% -14%, rgba(183,247,196,.09), transparent 46rem),
+    radial-gradient(ellipse at 100% 44%, rgba(183,247,196,.035), transparent 40rem),
+    radial-gradient(ellipse at 50% 100%, rgba(0,0,0,.48), transparent 58rem),
+    linear-gradient(180deg,#111416 0%,#1b2020 52%,#111416 100%);
+}
+body::after {
+  background:
+    linear-gradient(180deg,rgba(183,247,196,.42),transparent 1px) top/100% 1px no-repeat,
+    linear-gradient(0deg,rgba(183,247,196,.28),transparent 1px) bottom/100% 1px no-repeat;
+}
+::selection { background: #b7f7c4; }
+.header { background: rgba(17,20,22,.92); }
+.mobile-nav-toggle { background: #202627; }
+.mobile-navigation-panel { background: rgba(22,27,27,.98); }
+.mobile-navigation-panel a:not(.btn):hover,
+.mobile-navigation-panel a[aria-current="page"]:not(.btn) { background: rgba(183,247,196,.09); }
+.btn, button.btn { background: linear-gradient(115deg,#c9f8d1 0%,#a8e9b6 100%); }
+.hero {
+  background:
+    linear-gradient(#151a1a,#151a1a) padding-box,
+    linear-gradient(120deg,rgba(183,247,196,.28),transparent 38%,rgba(183,247,196,.14)) border-box;
+}
+.hero::before {
+  background:
+    radial-gradient(ellipse at 70% 45%,rgba(183,247,196,.11),transparent 40%),
+    radial-gradient(ellipse at 30% 65%,rgba(183,247,196,.045),transparent 45%);
+}
+.hero::after { background: linear-gradient(90deg,transparent,rgba(183,247,196,.58),transparent); }
+.hero-art { background: linear-gradient(145deg,rgba(183,247,196,.07),rgba(255,255,255,.012)); }
+.hero-art::before {
+  background:
+    linear-gradient(90deg,#b7f7c4 0 18px,transparent 18px) top left/18px 1px no-repeat,
+    linear-gradient(#b7f7c4 0 18px,transparent 18px) top left/1px 18px no-repeat,
+    linear-gradient(90deg,#b7f7c4 0 18px,transparent 18px) bottom right/18px 1px no-repeat,
+    linear-gradient(#b7f7c4 0 18px,transparent 18px) bottom right/1px 18px no-repeat;
+}
+.hero-scroll-cue { background: #202627; }
+.section,.movie-studio-section,.factory-section,.scifi-section,
+.creator-section,.coming-section,.waitlist-section { background-color: #151a1a; }
+.movie-studio-section { background: linear-gradient(180deg,#151a1a,#202525 55%,#151a1a); }
+.factory-section {
+  background: radial-gradient(ellipse at 80% 50%,rgba(183,247,196,.07),transparent 44%),#171d1d;
+}
+.scifi-section {
+  background: radial-gradient(ellipse at 68% 50%,rgba(183,247,196,.06),transparent 42%),linear-gradient(180deg,#151a1a,#202727 50%,#151a1a);
+}
+.what-is-sparrow-story {
+  background:
+    radial-gradient(ellipse at 78% 45%,rgba(183,247,196,.065),transparent 42%),
+    linear-gradient(180deg,#141919,#202626 50%,#141919);
+}
+.story-scene-light { background: radial-gradient(ellipse,rgba(183,247,196,.11),rgba(183,247,196,0) 68%); }
+.story-thread-progress { background: linear-gradient(180deg,#d5ffdc,#b7f7c4 65%,#86d99a); }
+.pinned-story { background: #151a1a; }
+.studio-console,.factory-board,.factory-console,.film-tool-layout,
+.console,.about-block,.card,.crew figure,.calculator-motif,.race-car-stage {
+  background-color: #202626;
+}
+.console-topline,.console-bottomline,.factory-board-head,.factory-board-foot {
+  background: rgba(183,247,196,.055);
+}
+.studio-tool:hover { background: linear-gradient(90deg,rgba(183,247,196,.09),rgba(183,247,196,.025)); }
+.calculator-motif { background: linear-gradient(145deg,rgba(183,247,196,.075),rgba(255,255,255,.012)); }
+.race-car-stage { background: radial-gradient(ellipse at 50% 74%,rgba(183,247,196,.075),transparent 48%),#191f1f; }
+.cards .card,.card { background: linear-gradient(145deg,#242a2a,#191f1f); }
+.about-block { background: linear-gradient(145deg,#242a2a,#191f1f); }
+.leadership-panel { background: linear-gradient(115deg,#242a2a,#2a3230 55%,#191f1f); }
+.contact-page { background-color: #151a1a; }
+.contact-page .contact-category-grid .card { background: linear-gradient(145deg,#242a2a,#191f1f); }
+.contact-form { background: linear-gradient(145deg,#242a2a,#171d1d); }
+.form input,.form select,.form textarea { background: #202626; }
+.waitlist-success { background: linear-gradient(145deg,#25312a,#191f1f); }
+.race-intro {
+  background:
+    radial-gradient(ellipse at 78% 45%,rgba(183,247,196,.065),transparent 38%),
+    linear-gradient(115deg,#171d1d 0%,#222828 48%,#141919 100%);
+}
+.film-tools-section { background: linear-gradient(180deg,#151a1a,#202626 55%,#171d1d); }
+.film-tool-layout { background: #202626; }
+.scifi-frame {
+  background:
+    radial-gradient(ellipse at 50% 70%,rgba(183,247,196,.13),transparent 36%),
+    linear-gradient(180deg,#202a28 0%,#27332f 48%,#101515 100%);
+}
+footer { background: linear-gradient(180deg,#1b2221,#111416); }
+footer .wrap::before {
+  background:
+    linear-gradient(90deg,#b7f7c4 0 22px,transparent 22px) top left/22px 1px no-repeat,
+    linear-gradient(#b7f7c4 0 22px,transparent 22px) top left/1px 22px no-repeat,
+    linear-gradient(90deg,#b7f7c4 0 22px,transparent 22px) bottom right/22px 1px no-repeat,
+    linear-gradient(#b7f7c4 0 22px,transparent 22px) bottom right/1px 22px no-repeat;
+}
