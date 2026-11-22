@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type CSSProperties } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -9,30 +9,35 @@ gsap.registerPlugin(ScrollTrigger);
 const scenes = [
   {
     number: "01",
+    chapter: "INTRODUCTION",
     headline: "WHAT IS SPARROW?",
     highlight: "SPARROW?",
     supporting: "A new vision for digital creativity and entertainment.",
   },
   {
     number: "02",
+    chapter: "CREATIVITY",
     headline: "CREATE WITHOUT LIMITS.",
     highlight: "LIMITS.",
     supporting: "Intelligent creative tools designed around human imagination.",
   },
   {
     number: "03",
+    chapter: "ENTERTAINMENT",
     headline: "STORIES THAT MOVE THE WORLD.",
     highlight: "WORLD.",
     supporting: "A vision spanning video editing, filmmaking, animation and livestreaming.",
   },
   {
     number: "04",
+    chapter: "CONNECTION",
     headline: "ONE CONNECTED CREATIVE WORLD.",
     highlight: "WORLD.",
     supporting: "Bringing creators, talent, businesses and entertainment together.",
   },
   {
     number: "05",
+    chapter: "THE FUTURE",
     headline: "WHERE CREATIVITY TAKES FLIGHT.",
     highlight: "FLIGHT.",
     supporting: "Sparrow Love Edit — building toward a new generation of creative experiences.",
@@ -89,6 +94,20 @@ export function WhatIsSparrowStory() {
           }
         });
 
+        gsap.fromTo(
+          ".story-thread-progress",
+          { scaleY: 0 },
+          {
+            scaleY: 1,
+            ease: "none",
+            scrollTrigger: {
+              trigger: element,
+              start: "top 72%",
+              end: "bottom 32%",
+              scrub: true,
+            },
+          },
+        );
       } else {
         chapters.forEach((chapter) => {
           ScrollTrigger.create({
@@ -115,6 +134,9 @@ export function WhatIsSparrowStory() {
       className="what-is-sparrow-story"
       aria-label="What Is Sparrow? Company story"
     >
+      <div className="story-thread" aria-hidden="true">
+        <span className="story-thread-progress" />
+      </div>
       {scenes.map((scene) => {
         const words = scene.headline.split(" ");
         return (
@@ -126,13 +148,19 @@ export function WhatIsSparrowStory() {
           >
             <div className="story-scene-light" aria-hidden="true" />
             <div className="wrap story-scene-layout">
+              <div className="story-scene-marker" aria-hidden="true">
+                <span>{scene.number}</span>
+                <span className="story-marker-line" />
+              </div>
               <div className="story-scene-copy">
+                <p className="story-chapter">SCENE {scene.number} <span>/</span> {scene.chapter}</p>
                 <h2 id={`sparrow-scene-${scene.number}`} aria-label={scene.headline}>
                   {words.map((word, index) => (
                     <span
                       className={`story-word${word === scene.highlight ? " story-word-highlight" : ""}`}
                       key={`${scene.number}-${index}`}
                       aria-hidden="true"
+                      style={{ "--word-index": index } as CSSProperties}
                     >
                       {word}{index < words.length - 1 ? " " : ""}
                     </span>
