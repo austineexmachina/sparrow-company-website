@@ -1,10 +1,11 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
-test("contact form exposes approved fields and passes axe", async ({ page }) => {
+test("contact page exposes the current approved copy and fields and passes axe", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/contact");
-  await expect(page.getByRole("heading", { name: "Let's Build the Future of Creativity Together." })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Let's Build the Future of Global Entertainment." })).toBeVisible();
+  await expect(page.getByText("UK-focused. Globally ambitious. Open to meaningful partnerships worldwide.")).toBeVisible();
   await expect(page.locator("#contact-category option")).toHaveCount(6);
   for (const label of [
     "Full Name",
@@ -22,7 +23,7 @@ test("contact form exposes approved fields and passes axe", async ({ page }) => 
   expect(result.violations).toEqual([]);
 });
 
-test("contact validates inputs and reports unavailable delivery without success", async ({ page }) => {
+test("contact validates required fields and presents the actual email-app handoff", async ({ page }) => {
   await page.goto("/contact");
   await page.getByRole("button", { name: "Submit Enquiry" }).click();
   await expect(page.getByText("Enter your full name.")).toBeVisible();
@@ -31,22 +32,21 @@ test("contact validates inputs and reports unavailable delivery without success"
   await page.getByLabel("Email Address").fill("avery@example.com");
   await page.getByLabel("Your Message").fill("I would like to discuss a collaboration.");
   await page.getByRole("button", { name: "Submit Enquiry" }).click();
-  await expect(page.getByRole("status")).toContainText(/unable to send your enquiry/i);
+  await expect(page.getByRole("status")).toContainText(
+    "Your email app should open with your enquiry addressed to austinechibueze905@gmail.com. Please press Send in your email app to complete it.",
+  );
   await expect(page.getByText("Thank you. Your enquiry has been sent.")).toHaveCount(0);
 });
 
-test("contact success is shown only after the API accepts delivery", async ({ page }) => {
-  await page.route("**/api/contact", async (route) => {
-    await route.fulfill({
-      status: 202,
-      contentType: "application/json",
-      body: JSON.stringify({ accepted: true }),
-    });
-  });
+test("contact form offers the six current enquiry categories", async ({ page }) => {
   await page.goto("/contact");
-  await page.getByLabel("Full Name").fill("Avery Example");
-  await page.getByLabel("Email Address").fill("avery@example.com");
-  await page.getByLabel("Your Message").fill("I would like to discuss a collaboration.");
-  await page.getByRole("button", { name: "Submit Enquiry" }).click();
-  await expect(page.getByRole("status")).toHaveText("Thank you. Your enquiry has been sent.");
+  const options = await page.locator("#contact-category option").allTextContents();
+  expect(options).toEqual([
+    "General Enquiry",
+    "Investment & Strategic Partnerships",
+    "Technology & Cofounder Opportunities",
+    "Business & Entertainment Partnerships",
+    "Media & Corporate Communications",
+    "Creator & Community Relations",
+  ]);
 });
