@@ -5,6 +5,7 @@ import { PinnedStory } from "@/components/pinned-story";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { WaitlistForm } from "@/components/waitlist-form";
 import { WhatIsSparrowStory } from "@/components/WhatIsSparrowStory";
+import { FilmFactory } from "@/components/film-factory";
 
 // Keep the two family/movie-night campaign visuals on the public homepage.
 const retainedImages = [
@@ -186,6 +187,7 @@ export default function Home() {
         <GalleryDepth><div className="crew">{retainedImages.map((item, index) => <ScrollReveal className="crew-reveal" delayMs={index * 45} key={item.file}><figure><Image src={`/images/${encodeURIComponent(item.file)}`} width={1400} height={900} sizes="(max-width: 500px) 90vw, (max-width: 760px) 45vw, 33vw" alt={item.alt} loading="lazy" /><figcaption>{item.caption}</figcaption></figure></ScrollReveal>)}</div></GalleryDepth>
       </div></section>
       <PinnedStory />
+      <FilmFactory />
       <section className="section coming-section"><div className="wrap">
         <ScrollReveal><p className="eyebrow">Our product vision</p><h2>One ecosystem. A world of possibilities.</h2></ScrollReveal>
         <div className="cards">{comingSoon.map(([title, description], index) => <ScrollReveal className="card-reveal" delayMs={index * 70} key={title}><article className="card"><span className="label">In development roadmap</span><h3>{title}</h3><p>{description}</p></article></ScrollReveal>)}</div>
