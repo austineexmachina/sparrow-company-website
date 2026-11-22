@@ -24,7 +24,7 @@ test("About and Contact navigation works at mobile, tablet, and desktop widths",
     } else {
       await navigation.getByRole("link", { name: "Contact" }).click();
     }
-    await expect(page).toHaveURL(/\\/contact$/);
+    await expect(page).toHaveURL(/\/contact$/);
     await expect(page.getByRole("heading", { name: "Let's Build the Future of Global Entertainment." })).toBeVisible();
     await expect(page.locator("#contact-category option")).toHaveCount(6);
 
@@ -36,7 +36,7 @@ test("About and Contact navigation works at mobile, tablet, and desktop widths",
 
     if (viewport.width <= 760) await navigation.getByRole("button", { name: "Open navigation menu" }).click();
     await navigation.getByRole("link", { name: "About" }).click();
-    await expect(page).toHaveURL(/\\/about$/);
+    await expect(page).toHaveURL(/\/about$/);
   }
 });
 
