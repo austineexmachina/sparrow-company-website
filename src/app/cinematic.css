@@ -433,7 +433,7 @@ footer a:hover { color: #fff; }
 }
 
 
-/* Legacy visual modules, no longer used on the company homepage. */
+/* MOTORSPORT x CINEMA — F1 precision language, calculator typography and film factory */
 .race-intro {
   position: relative;
   overflow: hidden;
@@ -457,19 +457,19 @@ footer a:hover { color: #fff; }
 .race-layout { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); align-items: center; gap: clamp(34px,6vw,88px); }
 .race-copy h2 { max-width: 620px; margin: 15px 0 22px; color: #f5f2f6; font: 500 clamp(2.7rem,5.5vw,5.5rem)/.98 Georgia,serif; letter-spacing: -.065em; }
 .race-copy > p:not(.eyebrow) { max-width: 550px; color: #bcb7c1; line-height: 1.8; }
-.race-equation { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin: 28px 0; color: #ded8cf; font: 700 .65rem/1.5 "Avenir Next","Segoe UI Variable","Segoe UI",Arial,sans-serif; letter-spacing: .09em; }
+.race-equation { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin: 28px 0; color: #ded8cf; font: 700 .65rem/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing: .09em; }
 .race-equation span { padding: 7px 9px; border: 1px solid rgba(210,203,192,.18); background: rgba(255,255,255,.025); }
 .race-equation b { color: var(--cinema-gold); font-size: .95rem; }
 .race-equation i { width: 100%; margin-top: 3px; color: var(--cinema-gold-soft); font-style: normal; font-size: .72rem; letter-spacing: .22em; }
 .race-readouts { display: flex; flex-wrap: wrap; gap: clamp(20px,4vw,42px); padding-top: 22px; border-top: 1px solid var(--cinema-line); }
 .race-readouts span { display: flex; flex-direction: column; gap: 3px; }
 .race-readouts b { color: #f4ead7; font: 500 clamp(1.7rem,3vw,2.6rem)/1 Georgia,serif; letter-spacing: -.05em; }
-.race-readouts small { color: #918a96; font: 700 .58rem/1.4 "Avenir Next","Segoe UI Variable","Segoe UI",Arial,sans-serif; letter-spacing: .13em; }
+.race-readouts small { color: #918a96; font: 700 .58rem/1.4 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing: .13em; }
 .race-visual { min-width: 0; padding: clamp(16px,2.5vw,28px); border: 1px solid rgba(201,169,110,.25); background: linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.012)); box-shadow: 0 30px 90px rgba(0,0,0,.35), inset 0 1px rgba(255,255,255,.06); }
-.race-topline,.race-bottomline { display: flex; justify-content: space-between; gap: 12px; color: #a79eaa; font: 700 .56rem/1.5 "Avenir Next","Segoe UI Variable","Segoe UI",Arial,sans-serif; letter-spacing: .12em; }
+.race-topline,.race-bottomline { display: flex; justify-content: space-between; gap: 12px; color: #a79eaa; font: 700 .56rem/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing: .12em; }
 .race-topline { padding-bottom: 12px; border-bottom: 1px solid var(--cinema-line); }
 .race-bottomline { padding-top: 12px; border-top: 1px solid var(--cinema-line); color: var(--cinema-gold-soft); }
-
+.f1-car-art { display: block; width: 100%; height: auto; margin: 12px 0; overflow: visible; }
 .film-tools-section { background: linear-gradient(180deg,#08080b,#0d0c11 55%,#09080c); }
 .film-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 35px; margin-bottom: 42px; }
 .film-section-heading h2 { max-width: 720px; margin: 12px 0 0; }
@@ -480,17 +480,17 @@ footer a:hover { color: #fff; }
 .film-tool-tab:last-child { border-bottom: 0; }
 .film-tool-tab:hover,.film-tool-tab.is-active { color: #f8f3fa; background: linear-gradient(90deg,rgba(201,169,110,.12),rgba(201,169,110,.025)); }
 .film-tool-tab.is-active { box-shadow: inset 2px 0 var(--cinema-gold); }
-.film-tool-number { color: var(--cinema-gold); font: 700 .7rem "Avenir Next","Segoe UI Variable","Segoe UI",Arial,sans-serif; }
+.film-tool-number { color: var(--cinema-gold); font: 700 .7rem ui-monospace,SFMono-Regular,Menlo,monospace; }
 .film-tool-name { font-size: .92rem; font-weight: 650; }
 .film-tool-arrow { color: #897b8c; font-size: 1.1rem; }
 .film-tool-detail { position: relative; display: flex; flex-direction: column; justify-content: center; min-height: 456px; padding: clamp(28px,5vw,58px); overflow: hidden; }
 .film-tool-detail::after { content: "S"; position: absolute; right: -4%; bottom: -28%; color: rgba(255,255,255,.025); font: 700 22rem/.8 Georgia,serif; pointer-events: none; }
-.film-detail-kicker,.film-output span,.factory-panel-title,.factory-console-head,.factory-console-foot,.factory-stage-index,.factory-stage-status,.factory-timeline-label,.factory-timeline-times,.factory-spec-row { color: var(--cinema-gold-soft); font: 700 .61rem/1.6 "Avenir Next","Segoe UI Variable","Segoe UI",Arial,sans-serif; letter-spacing: .13em; }
+.film-detail-kicker,.film-output span,.factory-panel-title,.factory-console-head,.factory-console-foot,.factory-stage-index,.factory-stage-status,.factory-timeline-label,.factory-timeline-times,.factory-spec-row { color: var(--cinema-gold-soft); font: 700 .61rem/1.6 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing: .13em; }
 .film-detail-glyph { display: grid; place-items: center; width: 62px; height: 62px; margin: 30px 0 22px; border: 1px solid rgba(201,169,110,.42); color: var(--cinema-gold-soft); background: rgba(201,169,110,.07); font-size: 1.6rem; }
 .film-tool-detail h3 { margin: 0 0 12px; color: #f8f3fa; font: 500 clamp(1.8rem,3vw,2.8rem)/1.05 Georgia,serif; letter-spacing: -.04em; }
 .film-tool-detail > p { max-width: 450px; margin: 0; }
 .film-output { display: flex; align-items: center; justify-content: space-between; gap: 14px; max-width: 460px; margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--cinema-line); }
-.film-output b { color: #d5d0d9; font: 700 .68rem "Avenir Next","Segoe UI Variable","Segoe UI",Arial,sans-serif; letter-spacing: .1em; }
+.film-output b { color: #d5d0d9; font: 700 .68rem ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing: .1em; }
 .roadmap-note { margin: 16px 0 0; color: #817985!important; font-size: .76rem; }
 .factory-section { position: relative; overflow: hidden; background: radial-gradient(ellipse at 50% 0%,rgba(129,91,146,.12),transparent 44%),#07070a; }
 .factory-heading { max-width: 820px; margin-bottom: 44px; }
@@ -561,7 +561,7 @@ footer a:hover { color: #fff; }
 .hero-visual-stack .hero-art img{aspect-ratio:1.48;object-fit:cover}
 .race-car-stage{position:relative;overflow:hidden;padding:14px 18px 10px;border:1px solid rgba(207,214,224,.2);background:radial-gradient(ellipse at 50% 74%,rgba(170,180,194,.13),transparent 48%),linear-gradient(135deg,rgba(255,255,255,.055),rgba(255,255,255,.012)),#0a0b0f;box-shadow:0 22px 60px rgba(0,0,0,.38),inset 0 1px rgba(255,255,255,.06)}
 .race-car-grid{position:absolute;inset:0;opacity:.17;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:28px 28px;mask-image:linear-gradient(180deg,black,transparent 92%)}
-.race-car-data{position:relative;z-index:1;display:flex;justify-content:space-between;gap:10px;color:#b9c0c9;font:700 .53rem/1.5 "Avenir Next","Segoe UI Variable","Segoe UI",Arial,sans-serif;letter-spacing:.11em}
+.race-car-data{position:relative;z-index:1;display:flex;justify-content:space-between;gap:10px;color:#b9c0c9;font:700 .53rem/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.11em}
 .race-car-data-top{padding-bottom:6px;border-bottom:1px solid rgba(210,218,229,.12)}
 .race-car-data-bottom{padding-top:6px;border-top:1px solid rgba(210,218,229,.12);color:#d1c7b3}
 .formula-car{position:relative;z-index:1;display:block;width:100%;height:auto;margin:-4px 0;overflow:visible;filter:drop-shadow(0 15px 12px rgba(0,0,0,.42))}
@@ -571,7 +571,7 @@ footer a:hover { color: #fff; }
 .movie-studio-section h2,.factory-layout h2,.scifi-content h2{margin:12px 0 18px;color:#f7f6f4;font:500 clamp(2.5rem,5.4vw,5.3rem)/.98 Georgia,serif;letter-spacing:-.065em}
 .studio-intro{max-width:760px;color:#b8bbc2;line-height:1.8}
 .studio-console{overflow:hidden;border:1px solid rgba(191,199,210,.22);background:linear-gradient(145deg,#17191f,#0b0c10 70%);box-shadow:0 28px 80px rgba(0,0,0,.38)}
-.console-topline,.console-bottomline{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:15px 20px;color:#c9cdd4;background:rgba(255,255,255,.025);font:700 .6rem/1.5 "Avenir Next","Segoe UI Variable","Segoe UI",Arial,sans-serif;letter-spacing:.13em}
+.console-topline,.console-bottomline{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:15px 20px;color:#c9cdd4;background:rgba(255,255,255,.025);font:700 .6rem/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.13em}
 .console-topline{border-bottom:1px solid rgba(225,229,236,.1)}
 .console-bottomline{border-top:1px solid rgba(225,229,236,.1);color:#c7b994}
 .studio-tool-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -579,7 +579,7 @@ footer a:hover { color: #fff; }
 .studio-tool:nth-child(3n){border-right:0}
 .studio-tool:nth-last-child(-n+3){border-bottom:0}
 .studio-tool:hover{background:rgba(255,255,255,.035)}
-.tool-number{color:#c8b78e;font:700 .65rem "Avenir Next","Segoe UI Variable","Segoe UI",Arial,sans-serif;letter-spacing:.13em}
+.tool-number{color:#c8b78e;font:700 .65rem ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.13em}
 .studio-tool h3{margin:19px 0 8px;color:#f1f0ee;font:500 1.25rem/1.15 Georgia,serif}
 .studio-tool p{max-width:310px;margin:0;color:#9fa3ad;font-size:.83rem;line-height:1.65}
 .tool-arrow{position:absolute;right:22px;top:20px;color:#9f9275}
@@ -587,23 +587,38 @@ footer a:hover { color: #fff; }
 .factory-layout{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);align-items:center;gap:clamp(30px,5vw,70px)}
 .factory-layout h2{max-width:600px}
 .calculator-motif{display:flex;flex-direction:column;max-width:370px;margin-top:36px;padding:22px 24px;border:1px solid rgba(201,169,110,.28);background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.01));box-shadow:0 18px 50px rgba(0,0,0,.25)}
-.calculator-kicker{color:#aaaeb6;font:700 .57rem "Avenir Next","Segoe UI Variable","Segoe UI",Arial,sans-serif;letter-spacing:.17em}
+.calculator-kicker{color:#aaaeb6;font:700 .57rem ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.17em}
 .calculator-equation{margin:13px 0;color:#f3f0e9;font:500 clamp(1.7rem,3vw,2.4rem)/1 Georgia,serif;letter-spacing:-.04em}
 .calculator-rule{width:100%;height:1px;background:linear-gradient(90deg,#c9a96e,rgba(201,169,110,.05))}
 .calculator-result{margin-top:10px;color:#d9c79d;font:500 2.4rem/1 Georgia,serif}
-.calculator-result small{margin-left:9px;color:#9a929f;font:700 .55rem "Avenir Next","Segoe UI Variable","Segoe UI",Arial,sans-serif;letter-spacing:.12em}
+.calculator-result small{margin-left:9px;color:#9a929f;font:700 .55rem ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em}
 .factory-board{overflow:hidden;border:1px solid rgba(190,199,211,.23);background:linear-gradient(145deg,#181a20,#0b0c10);box-shadow:0 28px 80px rgba(0,0,0,.38)}
-.factory-board-head,.factory-board-foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:15px 18px;color:#c4c9d1;font:700 .58rem/1.5 "Avenir Next","Segoe UI Variable","Segoe UI",Arial,sans-serif;letter-spacing:.1em}
+.factory-board-head,.factory-board-foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:15px 18px;color:#c4c9d1;font:700 .58rem/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.1em}
 .factory-board-head{border-bottom:1px solid rgba(225,229,236,.1)}
 .live-indicator{color:#d0c19c}
 .factory-board .factory-stage{display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:center;gap:12px;min-height:70px;padding:12px 18px;border-bottom:1px solid rgba(225,229,236,.085)}
-.factory-stage-number{color:#c9b88e;font:700 .65rem "Avenir Next","Segoe UI Variable","Segoe UI",Arial,sans-serif}
+.factory-stage-number{color:#c9b88e;font:700 .65rem ui-monospace,SFMono-Regular,Menlo,monospace}
 .factory-board .factory-stage>div{display:flex;flex-direction:column;gap:4px}
 .factory-board .factory-stage strong{color:#e7e7e7;font-size:.83rem}
 .factory-board .factory-stage small{color:#969ba5;font-size:.7rem}
-.factory-status{color:#b4a27a;font:700 .53rem "Avenir Next","Segoe UI Variable","Segoe UI",Arial,sans-serif;letter-spacing:.1em}
+.factory-status{color:#b4a27a;font:700 .53rem ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.1em}
 .factory-board-foot{border-top:1px solid rgba(225,229,236,.1);color:#a7aab2;font-size:.52rem}
-
+.scifi-section{overflow:hidden;background:radial-gradient(ellipse at 68% 50%,rgba(123,143,169,.14),transparent 40%),linear-gradient(180deg,#08090c,#11131a 50%,#08090c)}
+.scifi-content{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);align-items:center;gap:clamp(30px,5vw,72px)}
+.scifi-content h2{max-width:590px}
+.scifi-content .scroll-reveal>p:not(.eyebrow){max-width:580px;color:#b7bbc4;line-height:1.8}
+.resolution-line{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:28px;color:#d8c89e;font:700 .61rem ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em}
+.resolution-line i{width:4px;height:4px;border-radius:50%;background:#9a8b6b}
+.scifi-frame{position:relative;min-height:390px;overflow:hidden;border:1px solid rgba(188,201,220,.22);background:radial-gradient(ellipse at 50% 70%,rgba(151,170,197,.23),transparent 36%),linear-gradient(180deg,#111923 0%,#1a2634 48%,#07090e 100%);box-shadow:0 28px 80px rgba(0,0,0,.42)}
+.scifi-frame:before{content:"";position:absolute;inset:0;opacity:.25;background-image:linear-gradient(rgba(220,230,245,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(220,230,245,.1) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(180deg,black,transparent)}
+.scifi-orbit{position:absolute;left:50%;top:48%;width:68%;aspect-ratio:1.9;border:1px solid rgba(203,218,238,.48);border-radius:50%;transform:translate(-50%,-50%) rotate(-19deg);box-shadow:0 0 28px rgba(172,197,229,.12)}
+.orbit-two{width:86%;aspect-ratio:2.35;transform:translate(-50%,-50%) rotate(18deg);border-color:rgba(201,169,110,.35)}
+.scifi-horizon{position:absolute;left:-10%;right:-10%;bottom:12%;height:34%;border-top:1px solid rgba(210,223,243,.48);background:linear-gradient(180deg,rgba(113,145,184,.24),rgba(5,7,12,.94));transform:perspective(230px) rotateX(50deg);box-shadow:0 -15px 60px rgba(127,165,215,.16)}
+.scifi-monolith{position:absolute;left:50%;bottom:19%;width:17%;height:52%;transform:translateX(-50%) skewY(-7deg);background:linear-gradient(90deg,#11151e,#a3b1c3 45%,#252c38);clip-path:polygon(22% 0,78% 0,100% 100%,0 100%);box-shadow:0 0 45px rgba(165,189,224,.24)}
+.scifi-coordinate,.scifi-frame-label{position:absolute;z-index:2;color:#c3cbd6;font:700 .56rem ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em}
+.scifi-coordinate{top:17px;left:18px}
+.scifi-frame-label{bottom:17px;right:18px;color:#d4c59f}
+@media(max-width:900px){.factory-layout,.scifi-content{grid-template-columns:1fr}.factory-board{max-width:760px}.scifi-frame{min-height:350px}}
 @media(max-width:760px){
  .hero-visual-stack{gap:14px}.race-car-stage{padding:10px 11px 8px}.race-car-data{font-size:.43rem;letter-spacing:.06em}
  .studio-tool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.studio-tool{min-height:180px;padding:18px 15px}
@@ -612,116 +627,4 @@ footer a:hover { color: #fff; }
  .studio-tool h3{font-size:1.05rem}.studio-tool p{font-size:.76rem}
  .factory-board .factory-stage{grid-template-columns:27px minmax(0,1fr);gap:9px;padding:12px}.factory-status{display:none}
  .factory-board-foot{font-size:.46rem}.scifi-frame{min-height:290px}
-}
-
-
-/* Sparrow visual cleanup: retain the dark cinematic treatment, remove technical overlay styling. */
-:root {
-  --cinema-black: #07060D;
-  --cinema-ink: #07060D;
-  --cinema-gold: #6D28D9;
-  --cinema-gold-soft: #DB2777;
-  --cinema-purple: #6D28D9;
-  --cinema-pink: #DB2777;
-  --cinema-line: rgba(245, 235, 250, .14);
-}
-body {
-  background:
-    radial-gradient(ellipse at 12% 18%, rgba(109,40,217,.16), transparent 34rem),
-    radial-gradient(ellipse at 88% 36%, rgba(219,39,119,.12), transparent 38rem),
-    linear-gradient(180deg, #07060D 0%, #090711 52%, #07060D 100%);
-}
-::selection { color: #fff; background: #6D28D9; }
-a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
-  outline-color: #DB2777;
-}
-.btn, button.btn {
-  border-color: rgba(219,39,119,.62);
-  border-radius: 999px;
-  color: #fff;
-  background: linear-gradient(115deg, #6D28D9, #DB2777);
-  box-shadow: 0 10px 34px rgba(109,40,217,.24), inset 0 1px rgba(255,255,255,.16);
-  letter-spacing: .015em;
-  text-transform: none;
-}
-.btn:hover, button.btn:hover {
-  color: #fff;
-  box-shadow: 0 15px 42px rgba(219,39,119,.22), 0 0 30px rgba(109,40,217,.18);
-}
-.hero::before {
-  background:
-    radial-gradient(ellipse at 70% 45%, rgba(109,40,217,.20), transparent 38%),
-    radial-gradient(ellipse at 30% 65%, rgba(219,39,119,.12), transparent 45%);
-}
-.hero-art::before {
-  border-color: rgba(109,40,217,.42);
-  box-shadow: 0 35px 100px rgba(0,0,0,.48), 0 0 80px rgba(109,40,217,.12);
-}
-.hero-pointer-light {
-  background: radial-gradient(circle, rgba(219,39,119,.14), transparent 70%);
-}
-.hero-scroll-cue { color: #DB2777; }
-.what-is-sparrow-story {
-  border-color: rgba(109,40,217,.28);
-  background:
-    radial-gradient(ellipse at 78% 45%, rgba(109,40,217,.16), transparent 42%),
-    radial-gradient(ellipse at 12% 80%, rgba(219,39,119,.10), transparent 42%),
-    linear-gradient(180deg, #08070E, #0b0812 50%, #07060D);
-}
-.story-scene-layout { grid-template-columns: minmax(0, 1fr); }
-.story-scene-marker, .story-marker-line, .story-chapter, .story-thread { display: none !important; }
-.story-scene-copy h2 { color: #fbf8fc; }
-.story-word-highlight { color: #f2c8e5; text-shadow: 0 0 38px rgba(219,39,119,.20), 0 0 48px rgba(109,40,217,.18); }
-.story-scene-light {
-  background: radial-gradient(ellipse, rgba(109,40,217,.18), rgba(219,39,119,.08) 38%, transparent 68%);
-}
-.console-topline, .console-bottomline, .factory-board-head, .factory-board-foot {
-  display: none !important;
-}
-:where(
-  .tool-number,
-  .factory-stage-number,
-  .factory-status,
-  .console-topline,
-  .console-bottomline,
-  .factory-board-head,
-  .factory-board-foot,
-  .race-equation,
-  .race-readouts small,
-  .race-topline,
-  .race-bottomline,
-  .film-tool-number,
-  .film-detail-kicker,
-  .film-output span,
-  .factory-panel-title,
-  .factory-console-head,
-  .factory-console-foot,
-  .factory-stage-index,
-  .factory-stage-status,
-  .factory-timeline-label,
-  .factory-timeline-times,
-  .factory-spec-row,
-  .calculator-kicker,
-  .calculator-result small,
-  .race-car-data
-) {
-  font-family: "Avenir Next", "Segoe UI Variable", "Segoe UI", Arial, sans-serif !important;
-  font-variant-numeric: normal !important;
-  letter-spacing: .035em !important;
-}
-.race-car-stage, .race-car-grid, .formula-car, .race-car-data, .race-car-number,
-.calculator-motif, .scifi-frame, .scifi-orbit, .scifi-horizon, .scifi-monolith,
-.race-intro, .race-visual {
-  display: none !important;
-}
-.factory-stage-number { color: #DB2777; }
-.factory-status, .live-indicator { color: #e9c8f3; }
-.studio-tool { border-color: rgba(245,235,250,.10); }
-.studio-tool:hover { background: rgba(109,40,217,.08); }
-.card, .studio-console, .factory-board {
-  border-color: rgba(245,235,250,.14);
-  box-shadow: 0 24px 70px rgba(0,0,0,.34), 0 0 34px rgba(109,40,217,.045);
-}
-@media (max-width: 760px) {
-  .story-scene-layout { grid-template-columns: minmax(0, 1fr); }
 }
