@@ -42,11 +42,11 @@ test("contact form offers the six current enquiry categories", async ({ page }) 
   await page.goto("/contact");
   const options = await page.locator("#contact-category option").allTextContents();
   expect(options).toEqual([
+    "Investment & Partnerships",
+    "Technical Cofounder / Engineering",
+    "Business & Entertainment",
+    "Press & Media",
+    "Creator & Community",
     "General Enquiry",
-    "Investment & Strategic Partnerships",
-    "Technology & Cofounder Opportunities",
-    "Business & Entertainment Partnerships",
-    "Media & Corporate Communications",
-    "Creator & Community Relations",
   ]);
 });
