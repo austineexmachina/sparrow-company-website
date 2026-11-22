@@ -108,7 +108,7 @@ export function FilmFactory() {
               <div className="film-output"><span>WORKSPACE OUTPUT</span><b>{selected.output}</b></div>
             </article>
           </div>
-          <p className="roadmap-note">These are planned capabilities in Sparrow's product roadmap, not a claim that every tool is currently available.</p>
+          <p className="roadmap-note">These are planned capabilities in Sparrow’s product roadmap, not a claim that every tool is currently available.</p>
         </div>
       </section>
 
