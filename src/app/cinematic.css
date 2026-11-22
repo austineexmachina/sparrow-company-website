@@ -1025,3 +1025,14 @@ footer a:hover { color:#f08dbb; }
   .hero-scroll-cue svg,.studio-tool,.card,.btn { animation:none!important; transition:none!important; }
   .studio-tool:hover,.card:hover,.btn:hover { transform:none!important; }
 }
+
+
+/* ACCESSIBILITY FIX — keep display headings readable on the charcoal palette */
+body h1, body h2, body h3, body h4, body h5, body h6,
+body .story-scene-copy h2, body .story-step h2,
+body .about-page h1, body .contact-page h1,
+body .section h2, body .contact-page h2, body .about-page h2 {
+  color: #f7f5fa !important;
+  -webkit-text-fill-color: #f7f5fa;
+  background-image: none;
+}
