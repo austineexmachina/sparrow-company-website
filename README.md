@@ -8,7 +8,7 @@ Public website: <https://sparrow-company-website.austinechibueze905.workers.dev>
 
 The site presents Sparrow Love Edit’s company vision, creator ecosystem, founder information, contact options, and coming-soon waitlist. The website does not provide production editing, rendering, livestreaming, or booking services. Privacy and Terms pages are draft documents for founder/legal review and must not be treated as finalized legal terms.
 
-The six supplied promotional PNG files are retained in `public/images/`. `assets.manifest.json` records their original filenames, byte sizes, and SHA-256 hashes.
+Two original promotional PNG files are retained in `public/images/` and used on the public website: the Sparrow Love Edit Campus Celebration artwork and the Sparrow Love Edit Movie Night artwork. Four unused promotional images have been removed. `assets.manifest.json` records the retained filenames, byte sizes, and SHA-256 hashes.
 
 ## Technology
 
