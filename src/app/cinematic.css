@@ -847,7 +847,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position:relative;
 }
 .studio-console::before,.factory-board::before,.factory-console::before,
-.about-block::after,.calculator-motif::after {
+.calculator-motif::after {
   content:"";
   position:absolute;
   inset:7px;
