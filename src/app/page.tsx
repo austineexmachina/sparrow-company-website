@@ -136,7 +136,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section factory-section">
+      <section id="film-factory" className="section factory-section">
         <div className="wrap factory-layout">
           <div>
             <ScrollReveal>
