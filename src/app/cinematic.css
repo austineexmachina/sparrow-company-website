@@ -628,3 +628,118 @@ footer a:hover { color: #fff; }
  .factory-board .factory-stage{grid-template-columns:27px minmax(0,1fr);gap:9px;padding:12px}.factory-status{display:none}
  .factory-board-foot{font-size:.46rem}.scifi-frame{min-height:290px}
 }
+
+
+/* Sparrow visual cleanup: retain the dark cinematic treatment, remove HUD styling. */
+:root {
+  --cinema-black: #07060D;
+  --cinema-ink: #07060D;
+  --cinema-gold: #6D28D9;
+  --cinema-gold-soft: #DB2777;
+  --cinema-purple: #6D28D9;
+  --cinema-pink: #DB2777;
+  --cinema-line: rgba(245, 235, 250, .14);
+}
+body {
+  background:
+    radial-gradient(ellipse at 12% 18%, rgba(109,40,217,.16), transparent 34rem),
+    radial-gradient(ellipse at 88% 36%, rgba(219,39,119,.12), transparent 38rem),
+    linear-gradient(180deg, #07060D 0%, #090711 52%, #07060D 100%);
+}
+::selection { color: #fff; background: #6D28D9; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline-color: #DB2777;
+}
+.btn, button.btn {
+  border-color: rgba(219,39,119,.62);
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(115deg, #6D28D9, #DB2777);
+  box-shadow: 0 10px 34px rgba(109,40,217,.24), inset 0 1px rgba(255,255,255,.16);
+  letter-spacing: .015em;
+  text-transform: none;
+}
+.btn:hover, button.btn:hover {
+  color: #fff;
+  box-shadow: 0 15px 42px rgba(219,39,119,.22), 0 0 30px rgba(109,40,217,.18);
+}
+.hero::before {
+  background:
+    radial-gradient(ellipse at 70% 45%, rgba(109,40,217,.20), transparent 38%),
+    radial-gradient(ellipse at 30% 65%, rgba(219,39,119,.12), transparent 45%);
+}
+.hero-art::before {
+  border-color: rgba(109,40,217,.42);
+  box-shadow: 0 35px 100px rgba(0,0,0,.48), 0 0 80px rgba(109,40,217,.12);
+}
+.hero-pointer-light {
+  background: radial-gradient(circle, rgba(219,39,119,.14), transparent 70%);
+}
+.hero-scroll-cue { color: #DB2777; }
+.what-is-sparrow-story {
+  border-color: rgba(109,40,217,.28);
+  background:
+    radial-gradient(ellipse at 78% 45%, rgba(109,40,217,.16), transparent 42%),
+    radial-gradient(ellipse at 12% 80%, rgba(219,39,119,.10), transparent 42%),
+    linear-gradient(180deg, #08070E, #0b0812 50%, #07060D);
+}
+.story-scene-layout { grid-template-columns: minmax(0, 1fr); }
+.story-scene-marker, .story-marker-line, .story-chapter, .story-thread { display: none !important; }
+.story-scene-copy h2 { color: #fbf8fc; }
+.story-word-highlight { color: #f2c8e5; text-shadow: 0 0 38px rgba(219,39,119,.20), 0 0 48px rgba(109,40,217,.18); }
+.story-scene-light {
+  background: radial-gradient(ellipse, rgba(109,40,217,.18), rgba(219,39,119,.08) 38%, transparent 68%);
+}
+.console-topline, .console-bottomline, .factory-board-head, .factory-board-foot {
+  display: none !important;
+}
+:where(
+  .tool-number,
+  .factory-stage-number,
+  .factory-status,
+  .console-topline,
+  .console-bottomline,
+  .factory-board-head,
+  .factory-board-foot,
+  .race-equation,
+  .race-readouts small,
+  .race-topline,
+  .race-bottomline,
+  .film-tool-number,
+  .film-detail-kicker,
+  .film-output span,
+  .factory-panel-title,
+  .factory-console-head,
+  .factory-console-foot,
+  .factory-stage-index,
+  .factory-stage-status,
+  .factory-timeline-label,
+  .factory-timeline-times,
+  .factory-spec-row,
+  .calculator-kicker,
+  .calculator-result small,
+  .resolution-line,
+  .scifi-coordinate,
+  .scifi-frame-label,
+  .race-car-data
+) {
+  font-family: "Avenir Next", "Segoe UI Variable", "Segoe UI", Arial, sans-serif !important;
+  font-variant-numeric: normal !important;
+  letter-spacing: .035em !important;
+}
+.race-car-stage, .race-car-grid, .formula-car, .race-car-data, .race-car-number,
+.calculator-motif, .scifi-frame, .scifi-orbit, .scifi-horizon, .scifi-monolith,
+.scifi-coordinate, .scifi-frame-label, .resolution-line, .race-intro, .race-visual {
+  display: none !important;
+}
+.factory-stage-number { color: #DB2777; }
+.factory-status, .live-indicator { color: #e9c8f3; }
+.studio-tool { border-color: rgba(245,235,250,.10); }
+.studio-tool:hover { background: rgba(109,40,217,.08); }
+.card, .studio-console, .factory-board {
+  border-color: rgba(245,235,250,.14);
+  box-shadow: 0 24px 70px rgba(0,0,0,.34), 0 0 34px rgba(109,40,217,.045);
+}
+@media (max-width: 760px) {
+  .story-scene-layout { grid-template-columns: minmax(0, 1fr); }
+}
