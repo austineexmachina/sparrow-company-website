@@ -11,7 +11,7 @@ test("About and Contact navigation works at mobile, tablet, and desktop widths",
     await page.setViewportSize({ width: viewport.width, height: viewport.height });
     await page.goto("/about");
     await expect(page.getByRole("heading", { name: "Building the Future of Global Entertainment" })).toBeVisible();
-    await expect(page.getByText("AUSTINGREATLEO", { exact: true })).toBeVisible();
+    await expect(page.getByText("Chibueze Austine (AUSTINGREATLEO)", { exact: true })).toBeVisible();
     await expect(page.getByText("Founder — Sparrow Love Edit", { exact: true })).toBeVisible();
 
     const navigation = page.getByRole("navigation", { name: "Main navigation" });
